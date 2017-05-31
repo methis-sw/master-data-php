@@ -1,6 +1,6 @@
 # METHIS\GenderApi
 
-All URIs are relative to *https://master-data.methis.at*
+All URIs are relative to *https://master-data.methis.at/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
