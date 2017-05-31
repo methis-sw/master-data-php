@@ -183,4 +183,12 @@ class DeceasedContactResponseTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "date_of_birth"
+     */
+    public function testPropertyDateOfBirth()
+    {
+
+    }
+
 }

@@ -77,7 +77,8 @@ class DeceasedContactResponse implements ArrayAccess
         'title_of_nobility' => 'string',
         'house_number' => 'string',
         'city' => 'string',
-        'zip' => 'string'
+        'zip' => 'string',
+        'date_of_birth' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -100,7 +101,8 @@ class DeceasedContactResponse implements ArrayAccess
         'title_of_nobility' => 'title_of_nobility',
         'house_number' => 'house_number',
         'city' => 'city',
-        'zip' => 'zip'
+        'zip' => 'zip',
+        'date_of_birth' => 'date_of_birth'
     ];
 
 
@@ -119,7 +121,8 @@ class DeceasedContactResponse implements ArrayAccess
         'title_of_nobility' => 'setTitleOfNobility',
         'house_number' => 'setHouseNumber',
         'city' => 'setCity',
-        'zip' => 'setZip'
+        'zip' => 'setZip',
+        'date_of_birth' => 'setDateOfBirth'
     ];
 
 
@@ -138,7 +141,8 @@ class DeceasedContactResponse implements ArrayAccess
         'title_of_nobility' => 'getTitleOfNobility',
         'house_number' => 'getHouseNumber',
         'city' => 'getCity',
-        'zip' => 'getZip'
+        'zip' => 'getZip',
+        'date_of_birth' => 'getDateOfBirth'
     ];
 
     public static function attributeMap()
@@ -199,6 +203,7 @@ class DeceasedContactResponse implements ArrayAccess
         $this->container['house_number'] = isset($data['house_number']) ? $data['house_number'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['zip'] = isset($data['zip']) ? $data['zip'] : null;
+        $this->container['date_of_birth'] = isset($data['date_of_birth']) ? $data['date_of_birth'] : null;
     }
 
     /**
@@ -530,6 +535,27 @@ class DeceasedContactResponse implements ArrayAccess
     public function setZip($zip)
     {
         $this->container['zip'] = $zip;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_of_birth
+     * @return string
+     */
+    public function getDateOfBirth()
+    {
+        return $this->container['date_of_birth'];
+    }
+
+    /**
+     * Sets date_of_birth
+     * @param string $date_of_birth The date of birth of the contact
+     * @return $this
+     */
+    public function setDateOfBirth($date_of_birth)
+    {
+        $this->container['date_of_birth'] = $date_of_birth;
 
         return $this;
     }
