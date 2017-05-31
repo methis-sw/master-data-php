@@ -310,7 +310,7 @@ class DeceasedContactsApi
      * @param string $key The API key which you got for authenticating against the API (required)
      * @param string $batch JSON encoded request data as array of single requests. For structure of single request please see /deceased-contact/search route (required)
      * @throws \METHIS\ApiException on non-2xx response
-     * @return \METHIS\DeceasedContactsResponse
+     * @return \METHIS\DeceasedContactResponse[]
      */
     public function searchDeceasedContacts($key, $batch)
     {
@@ -326,7 +326,7 @@ class DeceasedContactsApi
      * @param string $key The API key which you got for authenticating against the API (required)
      * @param string $batch JSON encoded request data as array of single requests. For structure of single request please see /deceased-contact/search route (required)
      * @throws \METHIS\ApiException on non-2xx response
-     * @return array of \METHIS\DeceasedContactsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \METHIS\DeceasedContactResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function searchDeceasedContactsWithHttpInfo($key, $batch)
     {
@@ -387,15 +387,15 @@ class DeceasedContactsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\METHIS\DeceasedContactsResponse',
+                '\METHIS\DeceasedContactResponse[]',
                 '/deceased-contacts/search'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\METHIS\DeceasedContactsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\METHIS\DeceasedContactResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\METHIS\DeceasedContactsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\METHIS\DeceasedContactResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

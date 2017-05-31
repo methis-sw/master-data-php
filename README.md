@@ -99,7 +99,6 @@ Class | Method | HTTP request | Description
  - [ContactObject](docs/Model/ContactObject.md)
  - [DeceasedContactResponse](docs/Model/DeceasedContactResponse.md)
  - [DeceasedContactSearchRequest](docs/Model/DeceasedContactSearchRequest.md)
- - [DeceasedContactsResponse](docs/Model/DeceasedContactsResponse.md)
  - [ErrorForbidden](docs/Model/ErrorForbidden.md)
  - [ErrorInternalError](docs/Model/ErrorInternalError.md)
  - [ErrorMissingParameters](docs/Model/ErrorMissingParameters.md)
@@ -112,9 +111,7 @@ Class | Method | HTTP request | Description
  - [GenderUpdateResponse](docs/Model/GenderUpdateResponse.md)
  - [MovedContactResponse](docs/Model/MovedContactResponse.md)
  - [MovedContactSearchRequest](docs/Model/MovedContactSearchRequest.md)
- - [MovedContactsResponse](docs/Model/MovedContactsResponse.md)
  - [UndeliverableContactResponse](docs/Model/UndeliverableContactResponse.md)
- - [UndeliverableContactsResponse](docs/Model/UndeliverableContactsResponse.md)
 
 
 ## Documentation For Authorization
