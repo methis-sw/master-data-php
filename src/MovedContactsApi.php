@@ -72,7 +72,7 @@ class MovedContactsApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://master-data.methis.at');
+            $apiClient->getConfig()->setHost('https://master-data.methis.at/api');
         }
 
         $this->apiClient = $apiClient;

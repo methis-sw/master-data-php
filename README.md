@@ -78,7 +78,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://master-data.methis.at*
+All URIs are relative to *https://master-data.methis.at/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
