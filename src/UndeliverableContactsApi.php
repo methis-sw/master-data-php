@@ -310,7 +310,7 @@ class UndeliverableContactsApi
      * @param string $key The API key which you got for authenticating against the API (required)
      * @param string $batch JSON encoded request data as array of single requests. For structure of single request please see /undeliverable-contact/search route (required)
      * @throws \METHIS\ApiException on non-2xx response
-     * @return \METHIS\UndeliverableContactsResponse
+     * @return \METHIS\UndeliverableContactResponse[]
      */
     public function searchUndeliverableContacts($key, $batch)
     {
@@ -326,7 +326,7 @@ class UndeliverableContactsApi
      * @param string $key The API key which you got for authenticating against the API (required)
      * @param string $batch JSON encoded request data as array of single requests. For structure of single request please see /undeliverable-contact/search route (required)
      * @throws \METHIS\ApiException on non-2xx response
-     * @return array of \METHIS\UndeliverableContactsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \METHIS\UndeliverableContactResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function searchUndeliverableContactsWithHttpInfo($key, $batch)
     {
@@ -387,15 +387,15 @@ class UndeliverableContactsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\METHIS\UndeliverableContactsResponse',
+                '\METHIS\UndeliverableContactResponse[]',
                 '/undeliverable-contacts/search'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\METHIS\UndeliverableContactsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\METHIS\UndeliverableContactResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\METHIS\UndeliverableContactsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\METHIS\UndeliverableContactResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
