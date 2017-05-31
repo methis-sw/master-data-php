@@ -64,7 +64,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchUndeliverableContacts**
-> \METHIS\UndeliverableContactsResponse searchUndeliverableContacts($key, $batch)
+> \METHIS\UndeliverableContactResponse[] searchUndeliverableContacts($key, $batch)
 
 Batch search for name and addresses and detects if the contact has moved or is deceased.
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\METHIS\UndeliverableContactsResponse**](../Model/UndeliverableContactsResponse.md)
+[**\METHIS\UndeliverableContactResponse[]**](../Model/UndeliverableContactResponse.md)
 
 ### Authorization
 
