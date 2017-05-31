@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **house_number** | **string** | The house number as given as input | 
 **city** | **string** | The city as given as input | 
 **zip** | **string** | The zip code as given as input | 
+**date_of_birth** | **string** | The date of birth of the contact | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
