@@ -310,7 +310,7 @@ class MovedContactsApi
      * @param string $key The API key which you got for authenticating against the API (required)
      * @param string $batch JSON encoded request data as array of single requests. For structure of single request please see /moved-contact/search route (required)
      * @throws \METHIS\ApiException on non-2xx response
-     * @return \METHIS\MovedContactsResponse
+     * @return \METHIS\MovedContactResponse[]
      */
     public function searchMovedContacts($key, $batch)
     {
@@ -326,7 +326,7 @@ class MovedContactsApi
      * @param string $key The API key which you got for authenticating against the API (required)
      * @param string $batch JSON encoded request data as array of single requests. For structure of single request please see /moved-contact/search route (required)
      * @throws \METHIS\ApiException on non-2xx response
-     * @return array of \METHIS\MovedContactsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \METHIS\MovedContactResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function searchMovedContactsWithHttpInfo($key, $batch)
     {
@@ -387,15 +387,15 @@ class MovedContactsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\METHIS\MovedContactsResponse',
+                '\METHIS\MovedContactResponse[]',
                 '/moved-contacts/search'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\METHIS\MovedContactsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\METHIS\MovedContactResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\METHIS\MovedContactsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\METHIS\MovedContactResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

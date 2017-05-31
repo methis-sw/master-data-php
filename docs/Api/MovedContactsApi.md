@@ -64,7 +64,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchMovedContacts**
-> \METHIS\MovedContactsResponse searchMovedContacts($key, $batch)
+> \METHIS\MovedContactResponse[] searchMovedContacts($key, $batch)
 
 Detect moved contacts as batch and try to find the contact's new address
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\METHIS\MovedContactsResponse**](../Model/MovedContactsResponse.md)
+[**\METHIS\MovedContactResponse[]**](../Model/MovedContactResponse.md)
 
 ### Authorization
 
