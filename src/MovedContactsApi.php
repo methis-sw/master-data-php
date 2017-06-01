@@ -107,8 +107,8 @@ class MovedContactsApi
      * Detect a moved contact and try to find the contact's new address
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
-     * @param string $last_name  (required)
+     * @param string $first_name The first name (required)
+     * @param string $last_name The last name (required)
      * @param string $country_old 2 digit ISO country code (required)
      * @param string $zip_old  (required)
      * @param string $street_old Street name without housenumber or any other additions. (required)
@@ -127,8 +127,8 @@ class MovedContactsApi
      * Detect a moved contact and try to find the contact's new address
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
-     * @param string $last_name  (required)
+     * @param string $first_name The first name (required)
+     * @param string $last_name The last name (required)
      * @param string $country_old 2 digit ISO country code (required)
      * @param string $zip_old  (required)
      * @param string $street_old Street name without housenumber or any other additions. (required)

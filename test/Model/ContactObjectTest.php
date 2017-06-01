@@ -96,54 +96,6 @@ class ContactObjectTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "first_name"
-     */
-    public function testPropertyFirstName()
-    {
-
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
-    {
-
-    }
-
-    /**
-     * Test attribute "country_code"
-     */
-    public function testPropertyCountryCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "street"
-     */
-    public function testPropertyStreet()
-    {
-
-    }
-
-    /**
-     * Test attribute "street_addition"
-     */
-    public function testPropertyStreetAddition()
-    {
-
-    }
-
-    /**
-     * Test attribute "timestamp"
-     */
-    public function testPropertyTimestamp()
-    {
-
-    }
-
-    /**
      * Test attribute "gender"
      */
     public function testPropertyGender()
@@ -168,17 +120,25 @@ class ContactObjectTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "house_number"
+     * Test attribute "first_name"
      */
-    public function testPropertyHouseNumber()
+    public function testPropertyFirstName()
     {
 
     }
 
     /**
-     * Test attribute "house_number_addition"
+     * Test attribute "last_name"
      */
-    public function testPropertyHouseNumberAddition()
+    public function testPropertyLastName()
+    {
+
+    }
+
+    /**
+     * Test attribute "country_code"
+     */
+    public function testPropertyCountryCode()
     {
 
     }
@@ -195,6 +155,46 @@ class ContactObjectTest extends \PHPUnit_Framework_TestCase
      * Test attribute "zip"
      */
     public function testPropertyZip()
+    {
+
+    }
+
+    /**
+     * Test attribute "street"
+     */
+    public function testPropertyStreet()
+    {
+
+    }
+
+    /**
+     * Test attribute "street_addition"
+     */
+    public function testPropertyStreetAddition()
+    {
+
+    }
+
+    /**
+     * Test attribute "house_number"
+     */
+    public function testPropertyHouseNumber()
+    {
+
+    }
+
+    /**
+     * Test attribute "house_number_addition"
+     */
+    public function testPropertyHouseNumberAddition()
+    {
+
+    }
+
+    /**
+     * Test attribute "timestamp"
+     */
+    public function testPropertyTimestamp()
     {
 
     }

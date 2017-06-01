@@ -67,19 +67,19 @@ class ContactObject implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'country_code' => 'string',
-        'street' => 'string',
-        'street_addition' => 'string',
-        'timestamp' => 'string',
         'gender' => 'string',
         'title' => 'string',
         'title_of_nobility' => 'string',
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'country_code' => 'string',
+        'city' => 'string',
+        'zip' => 'string',
+        'street' => 'string',
+        'street_addition' => 'string',
         'house_number' => 'string',
         'house_number_addition' => 'string',
-        'city' => 'string',
-        'zip' => 'string'
+        'timestamp' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -92,19 +92,19 @@ class ContactObject implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'country_code' => 'country_code',
-        'street' => 'street',
-        'street_addition' => 'street_addition',
-        'timestamp' => 'timestamp',
         'gender' => 'gender',
         'title' => 'title',
         'title_of_nobility' => 'title_of_nobility',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
+        'country_code' => 'country_code',
+        'city' => 'city',
+        'zip' => 'zip',
+        'street' => 'street',
+        'street_addition' => 'street_addition',
         'house_number' => 'house_number',
         'house_number_addition' => 'house_number_addition',
-        'city' => 'city',
-        'zip' => 'zip'
+        'timestamp' => 'timestamp'
     ];
 
 
@@ -113,19 +113,19 @@ class ContactObject implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'country_code' => 'setCountryCode',
-        'street' => 'setStreet',
-        'street_addition' => 'setStreetAddition',
-        'timestamp' => 'setTimestamp',
         'gender' => 'setGender',
         'title' => 'setTitle',
         'title_of_nobility' => 'setTitleOfNobility',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'country_code' => 'setCountryCode',
+        'city' => 'setCity',
+        'zip' => 'setZip',
+        'street' => 'setStreet',
+        'street_addition' => 'setStreetAddition',
         'house_number' => 'setHouseNumber',
         'house_number_addition' => 'setHouseNumberAddition',
-        'city' => 'setCity',
-        'zip' => 'setZip'
+        'timestamp' => 'setTimestamp'
     ];
 
 
@@ -134,19 +134,19 @@ class ContactObject implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'country_code' => 'getCountryCode',
-        'street' => 'getStreet',
-        'street_addition' => 'getStreetAddition',
-        'timestamp' => 'getTimestamp',
         'gender' => 'getGender',
         'title' => 'getTitle',
         'title_of_nobility' => 'getTitleOfNobility',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
+        'country_code' => 'getCountryCode',
+        'city' => 'getCity',
+        'zip' => 'getZip',
+        'street' => 'getStreet',
+        'street_addition' => 'getStreetAddition',
         'house_number' => 'getHouseNumber',
         'house_number_addition' => 'getHouseNumberAddition',
-        'city' => 'getCity',
-        'zip' => 'getZip'
+        'timestamp' => 'getTimestamp'
     ];
 
     public static function attributeMap()
@@ -196,19 +196,19 @@ class ContactObject implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
-        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
-        $this->container['street'] = isset($data['street']) ? $data['street'] : null;
-        $this->container['street_addition'] = isset($data['street_addition']) ? $data['street_addition'] : null;
-        $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
         $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['title_of_nobility'] = isset($data['title_of_nobility']) ? $data['title_of_nobility'] : null;
-        $this->container['house_number'] = isset($data['house_number']) ? $data['house_number'] : null;
-        $this->container['house_number_addition'] = isset($data['house_number_addition']) ? $data['house_number_addition'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['zip'] = isset($data['zip']) ? $data['zip'] : null;
+        $this->container['street'] = isset($data['street']) ? $data['street'] : null;
+        $this->container['street_addition'] = isset($data['street_addition']) ? $data['street_addition'] : null;
+        $this->container['house_number'] = isset($data['house_number']) ? $data['house_number'] : null;
+        $this->container['house_number_addition'] = isset($data['house_number_addition']) ? $data['house_number_addition'] : null;
+        $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
     }
 
     /**
@@ -219,24 +219,6 @@ class ContactObject implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        if ($this->container['first_name'] === null) {
-            $invalid_properties[] = "'first_name' can't be null";
-        }
-        if ($this->container['last_name'] === null) {
-            $invalid_properties[] = "'last_name' can't be null";
-        }
-        if ($this->container['country_code'] === null) {
-            $invalid_properties[] = "'country_code' can't be null";
-        }
-        if ($this->container['street'] === null) {
-            $invalid_properties[] = "'street' can't be null";
-        }
-        if ($this->container['street_addition'] === null) {
-            $invalid_properties[] = "'street_addition' can't be null";
-        }
-        if ($this->container['timestamp'] === null) {
-            $invalid_properties[] = "'timestamp' can't be null";
-        }
         if ($this->container['gender'] === null) {
             $invalid_properties[] = "'gender' can't be null";
         }
@@ -251,17 +233,35 @@ class ContactObject implements ArrayAccess
         if ($this->container['title_of_nobility'] === null) {
             $invalid_properties[] = "'title_of_nobility' can't be null";
         }
-        if ($this->container['house_number'] === null) {
-            $invalid_properties[] = "'house_number' can't be null";
+        if ($this->container['first_name'] === null) {
+            $invalid_properties[] = "'first_name' can't be null";
         }
-        if ($this->container['house_number_addition'] === null) {
-            $invalid_properties[] = "'house_number_addition' can't be null";
+        if ($this->container['last_name'] === null) {
+            $invalid_properties[] = "'last_name' can't be null";
+        }
+        if ($this->container['country_code'] === null) {
+            $invalid_properties[] = "'country_code' can't be null";
         }
         if ($this->container['city'] === null) {
             $invalid_properties[] = "'city' can't be null";
         }
         if ($this->container['zip'] === null) {
             $invalid_properties[] = "'zip' can't be null";
+        }
+        if ($this->container['street'] === null) {
+            $invalid_properties[] = "'street' can't be null";
+        }
+        if ($this->container['street_addition'] === null) {
+            $invalid_properties[] = "'street_addition' can't be null";
+        }
+        if ($this->container['house_number'] === null) {
+            $invalid_properties[] = "'house_number' can't be null";
+        }
+        if ($this->container['house_number_addition'] === null) {
+            $invalid_properties[] = "'house_number_addition' can't be null";
+        }
+        if ($this->container['timestamp'] === null) {
+            $invalid_properties[] = "'timestamp' can't be null";
         }
         return $invalid_properties;
     }
@@ -274,24 +274,6 @@ class ContactObject implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['first_name'] === null) {
-            return false;
-        }
-        if ($this->container['last_name'] === null) {
-            return false;
-        }
-        if ($this->container['country_code'] === null) {
-            return false;
-        }
-        if ($this->container['street'] === null) {
-            return false;
-        }
-        if ($this->container['street_addition'] === null) {
-            return false;
-        }
-        if ($this->container['timestamp'] === null) {
-            return false;
-        }
         if ($this->container['gender'] === null) {
             return false;
         }
@@ -305,10 +287,13 @@ class ContactObject implements ArrayAccess
         if ($this->container['title_of_nobility'] === null) {
             return false;
         }
-        if ($this->container['house_number'] === null) {
+        if ($this->container['first_name'] === null) {
             return false;
         }
-        if ($this->container['house_number_addition'] === null) {
+        if ($this->container['last_name'] === null) {
+            return false;
+        }
+        if ($this->container['country_code'] === null) {
             return false;
         }
         if ($this->container['city'] === null) {
@@ -317,9 +302,91 @@ class ContactObject implements ArrayAccess
         if ($this->container['zip'] === null) {
             return false;
         }
+        if ($this->container['street'] === null) {
+            return false;
+        }
+        if ($this->container['street_addition'] === null) {
+            return false;
+        }
+        if ($this->container['house_number'] === null) {
+            return false;
+        }
+        if ($this->container['house_number_addition'] === null) {
+            return false;
+        }
+        if ($this->container['timestamp'] === null) {
+            return false;
+        }
         return true;
     }
 
+
+    /**
+     * Gets gender
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->container['gender'];
+    }
+
+    /**
+     * Sets gender
+     * @param string $gender M for man and F for female
+     * @return $this
+     */
+    public function setGender($gender)
+    {
+        $allowed_values = array('M', 'F', '');
+        if ((!in_array($gender, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'gender', must be one of 'M', 'F', ''");
+        }
+        $this->container['gender'] = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     * @param string $title Academic titles
+     * @return $this
+     */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets title_of_nobility
+     * @return string
+     */
+    public function getTitleOfNobility()
+    {
+        return $this->container['title_of_nobility'];
+    }
+
+    /**
+     * Sets title_of_nobility
+     * @param string $title_of_nobility Titel of nobility
+     * @return $this
+     */
+    public function setTitleOfNobility($title_of_nobility)
+    {
+        $this->container['title_of_nobility'] = $title_of_nobility;
+
+        return $this;
+    }
 
     /**
      * Gets first_name
@@ -332,7 +399,7 @@ class ContactObject implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name
+     * @param string $first_name First name of the contact
      * @return $this
      */
     public function setFirstName($first_name)
@@ -353,7 +420,7 @@ class ContactObject implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name
+     * @param string $last_name Last name of the contact
      * @return $this
      */
     public function setLastName($last_name)
@@ -380,6 +447,48 @@ class ContactObject implements ArrayAccess
     public function setCountryCode($country_code)
     {
         $this->container['country_code'] = $country_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets city
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     * @param string $city City of the address
+     * @return $this
+     */
+    public function setCity($city)
+    {
+        $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
+     * Gets zip
+     * @return string
+     */
+    public function getZip()
+    {
+        return $this->container['zip'];
+    }
+
+    /**
+     * Sets zip
+     * @param string $zip Zip of the address
+     * @return $this
+     */
+    public function setZip($zip)
+    {
+        $this->container['zip'] = $zip;
 
         return $this;
     }
@@ -427,94 +536,6 @@ class ContactObject implements ArrayAccess
     }
 
     /**
-     * Gets timestamp
-     * @return string
-     */
-    public function getTimestamp()
-    {
-        return $this->container['timestamp'];
-    }
-
-    /**
-     * Sets timestamp
-     * @param string $timestamp Timestamp when the entry has been created
-     * @return $this
-     */
-    public function setTimestamp($timestamp)
-    {
-        $this->container['timestamp'] = $timestamp;
-
-        return $this;
-    }
-
-    /**
-     * Gets gender
-     * @return string
-     */
-    public function getGender()
-    {
-        return $this->container['gender'];
-    }
-
-    /**
-     * Sets gender
-     * @param string $gender M for man and F for female
-     * @return $this
-     */
-    public function setGender($gender)
-    {
-        $allowed_values = array('M', 'F', '');
-        if ((!in_array($gender, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'gender', must be one of 'M', 'F', ''");
-        }
-        $this->container['gender'] = $gender;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     * @param string $title
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets title_of_nobility
-     * @return string
-     */
-    public function getTitleOfNobility()
-    {
-        return $this->container['title_of_nobility'];
-    }
-
-    /**
-     * Sets title_of_nobility
-     * @param string $title_of_nobility 
-     * @return $this
-     */
-    public function setTitleOfNobility($title_of_nobility)
-    {
-        $this->container['title_of_nobility'] = $title_of_nobility;
-
-        return $this;
-    }
-
-    /**
      * Gets house_number
      * @return string
      */
@@ -525,7 +546,7 @@ class ContactObject implements ArrayAccess
 
     /**
      * Sets house_number
-     * @param string $house_number
+     * @param string $house_number House number of the address
      * @return $this
      */
     public function setHouseNumber($house_number)
@@ -557,43 +578,22 @@ class ContactObject implements ArrayAccess
     }
 
     /**
-     * Gets city
+     * Gets timestamp
      * @return string
      */
-    public function getCity()
+    public function getTimestamp()
     {
-        return $this->container['city'];
+        return $this->container['timestamp'];
     }
 
     /**
-     * Sets city
-     * @param string $city
+     * Sets timestamp
+     * @param string $timestamp Timestamp when the entry has been created
      * @return $this
      */
-    public function setCity($city)
+    public function setTimestamp($timestamp)
     {
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets zip
-     * @return string
-     */
-    public function getZip()
-    {
-        return $this->container['zip'];
-    }
-
-    /**
-     * Sets zip
-     * @param string $zip
-     * @return $this
-     */
-    public function setZip($zip)
-    {
-        $this->container['zip'] = $zip;
+        $this->container['timestamp'] = $timestamp;
 
         return $this;
     }

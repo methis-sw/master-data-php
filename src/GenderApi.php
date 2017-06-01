@@ -223,7 +223,7 @@ class GenderApi
      * Detects the gender based on the given first name
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
+     * @param string $first_name The first name (required)
      * @param string $country_code Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched. (optional)
      * @throws \METHIS\ApiException on non-2xx response
      * @return \METHIS\GenderDetectResponse
@@ -240,7 +240,7 @@ class GenderApi
      * Detects the gender based on the given first name
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
+     * @param string $first_name The first name (required)
      * @param string $country_code Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched. (optional)
      * @throws \METHIS\ApiException on non-2xx response
      * @return array of \METHIS\GenderDetectResponse, HTTP status code, HTTP response headers (array of strings)
@@ -369,7 +369,7 @@ class GenderApi
      * Update gender data
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
+     * @param string $first_name The first name (required)
      * @param string $country_code Optional 2 digit ISO country code if the given data should be country specific. (optional)
      * @param string $gender The gender as it should be set (optional)
      * @throws \METHIS\ApiException on non-2xx response
@@ -387,7 +387,7 @@ class GenderApi
      * Update gender data
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
+     * @param string $first_name The first name (required)
      * @param string $country_code Optional 2 digit ISO country code if the given data should be country specific. (optional)
      * @param string $gender The gender as it should be set (optional)
      * @throws \METHIS\ApiException on non-2xx response
@@ -528,13 +528,14 @@ class GenderApi
      * Detects the gender based on the given first name
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
+     * @param string $first_name The first name (required)
+     * @param string $country_code Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched. (optional)
      * @throws \METHIS\ApiException on non-2xx response
      * @return \METHIS\GenderDetectResponse
      */
-    public function gendersDetect($key, $first_name)
+    public function gendersDetect($key, $first_name, $country_code = null)
     {
-        list($response) = $this->gendersDetectWithHttpInfo($key, $first_name);
+        list($response) = $this->gendersDetectWithHttpInfo($key, $first_name, $country_code);
         return $response;
     }
 
@@ -544,11 +545,12 @@ class GenderApi
      * Detects the gender based on the given first name
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
+     * @param string $first_name The first name (required)
+     * @param string $country_code Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched. (optional)
      * @throws \METHIS\ApiException on non-2xx response
      * @return array of \METHIS\GenderDetectResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gendersDetectWithHttpInfo($key, $first_name)
+    public function gendersDetectWithHttpInfo($key, $first_name, $country_code = null)
     {
         // verify the required parameter 'key' is set
         if ($key === null) {
@@ -570,6 +572,13 @@ class GenderApi
         }
         if ((strlen($first_name) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$first_name" when calling GenderApi.gendersDetect, must be bigger than or equal to 1.');
+        }
+
+        if (!is_null($country_code) && (strlen($country_code) > 2)) {
+            throw new \InvalidArgumentException('invalid length for "$country_code" when calling GenderApi.gendersDetect, must be smaller than or equal to 2.');
+        }
+        if (!is_null($country_code) && (strlen($country_code) < 2)) {
+            throw new \InvalidArgumentException('invalid length for "$country_code" when calling GenderApi.gendersDetect, must be bigger than or equal to 2.');
         }
 
         // parse inputs
@@ -594,6 +603,10 @@ class GenderApi
         // form params
         if ($first_name !== null) {
             $formParams['first_name'] = $this->apiClient->getSerializer()->toFormValue($first_name);
+        }
+        // form params
+        if ($country_code !== null) {
+            $formParams['country_code'] = $this->apiClient->getSerializer()->toFormValue($country_code);
         }
         
         // for model (json/xml)

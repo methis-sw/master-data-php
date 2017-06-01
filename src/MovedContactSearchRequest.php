@@ -230,7 +230,7 @@ class MovedContactSearchRequest implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name
+     * @param string $first_name First name of the contact
      * @return $this
      */
     public function setFirstName($first_name)
@@ -251,7 +251,7 @@ class MovedContactSearchRequest implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name
+     * @param string $last_name Last name of the contact
      * @return $this
      */
     public function setLastName($last_name)
@@ -300,7 +300,7 @@ class MovedContactSearchRequest implements ArrayAccess
 
     /**
      * Sets zip_old
-     * @param string $zip_old 
+     * @param string $zip_old Zip of the old address
      * @return $this
      */
     public function setZipOld($zip_old)

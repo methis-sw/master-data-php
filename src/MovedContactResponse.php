@@ -533,7 +533,7 @@ class MovedContactResponse implements ArrayAccess
 
     /**
      * Sets title
-     * @param string $title
+     * @param string $title Academic titles
      * @return $this
      */
     public function setTitle($title)
@@ -554,7 +554,7 @@ class MovedContactResponse implements ArrayAccess
 
     /**
      * Sets title_of_nobility
-     * @param string $title_of_nobility 
+     * @param string $title_of_nobility The title of nibility e.g. King
      * @return $this
      */
     public function setTitleOfNobility($title_of_nobility)

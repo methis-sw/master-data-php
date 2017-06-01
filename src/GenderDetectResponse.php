@@ -226,7 +226,7 @@ class GenderDetectResponse implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name
+     * @param string $first_name First name for the search
      * @return $this
      */
     public function setFirstName($first_name)
