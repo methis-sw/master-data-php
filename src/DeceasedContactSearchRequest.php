@@ -230,7 +230,7 @@ class DeceasedContactSearchRequest implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name
+     * @param string $first_name First name of the contact
      * @return $this
      */
     public function setFirstName($first_name)
@@ -251,7 +251,7 @@ class DeceasedContactSearchRequest implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name
+     * @param string $last_name Last name of the contact
      * @return $this
      */
     public function setLastName($last_name)
@@ -300,7 +300,7 @@ class DeceasedContactSearchRequest implements ArrayAccess
 
     /**
      * Sets zip
-     * @param string $zip 
+     * @param string $zip Zip of the contact
      * @return $this
      */
     public function setZip($zip)

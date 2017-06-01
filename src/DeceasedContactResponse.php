@@ -315,7 +315,7 @@ class DeceasedContactResponse implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name
+     * @param string $first_name The first name of the contact
      * @return $this
      */
     public function setFirstName($first_name)
@@ -336,7 +336,7 @@ class DeceasedContactResponse implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name
+     * @param string $last_name The last name of the contact
      * @return $this
      */
     public function setLastName($last_name)
@@ -445,7 +445,7 @@ class DeceasedContactResponse implements ArrayAccess
 
     /**
      * Sets title
-     * @param string $title
+     * @param string $title Academic titles
      * @return $this
      */
     public function setTitle($title)
@@ -466,7 +466,7 @@ class DeceasedContactResponse implements ArrayAccess
 
     /**
      * Sets title_of_nobility
-     * @param string $title_of_nobility 
+     * @param string $title_of_nobility The title of nibility e.g. King
      * @return $this
      */
     public function setTitleOfNobility($title_of_nobility)

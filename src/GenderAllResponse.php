@@ -216,7 +216,7 @@ class GenderAllResponse implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name
+     * @param string $first_name First name which should be searched for
      * @return $this
      */
     public function setFirstName($first_name)

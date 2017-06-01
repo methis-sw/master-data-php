@@ -69,7 +69,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new METHIS\Api\GenderApi();
 $key = "key_example"; // string | The API key which you got for authenticating against the API
-$first_name = "first_name_example"; // string | 
+$first_name = "first_name_example"; // string | The first name
 $country_code = "country_code_example"; // string | Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched.
 
 try {
@@ -86,7 +86,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| The API key which you got for authenticating against the API |
- **first_name** | **string**|  |
+ **first_name** | **string**| The first name |
  **country_code** | **string**| Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched. | [optional]
 
 ### Return type
@@ -118,7 +118,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new METHIS\Api\GenderApi();
 $key = "key_example"; // string | The API key which you got for authenticating against the API
-$first_name = "first_name_example"; // string | 
+$first_name = "first_name_example"; // string | The first name
 $country_code = "country_code_example"; // string | Optional 2 digit ISO country code if the given data should be country specific.
 $gender = "gender_example"; // string | The gender as it should be set
 
@@ -136,7 +136,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| The API key which you got for authenticating against the API |
- **first_name** | **string**|  |
+ **first_name** | **string**| The first name |
  **country_code** | **string**| Optional 2 digit ISO country code if the given data should be country specific. | [optional]
  **gender** | **string**| The gender as it should be set | [optional]
 
@@ -156,7 +156,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **gendersDetect**
-> \METHIS\GenderDetectResponse gendersDetect($key, $first_name)
+> \METHIS\GenderDetectResponse gendersDetect($key, $first_name, $country_code)
 
 Detects the gender based on the given first name
 
@@ -169,10 +169,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new METHIS\Api\GenderApi();
 $key = "key_example"; // string | The API key which you got for authenticating against the API
-$first_name = "first_name_example"; // string | 
+$first_name = "first_name_example"; // string | The first name
+$country_code = "country_code_example"; // string | Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched.
 
 try {
-    $result = $api_instance->gendersDetect($key, $first_name);
+    $result = $api_instance->gendersDetect($key, $first_name, $country_code);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GenderApi->gendersDetect: ', $e->getMessage(), PHP_EOL;
@@ -185,7 +186,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| The API key which you got for authenticating against the API |
- **first_name** | **string**|  |
+ **first_name** | **string**| The first name |
+ **country_code** | **string**| Optional 2 digit ISO country code. If this value is set, only country specific first names will be searched. | [optional]
 
 ### Return type
 

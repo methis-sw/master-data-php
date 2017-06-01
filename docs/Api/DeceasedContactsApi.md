@@ -22,8 +22,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new METHIS\Api\DeceasedContactsApi();
 $key = "key_example"; // string | The API key which you got for authenticating against the API
-$first_name = "first_name_example"; // string | 
-$last_name = "last_name_example"; // string | 
+$first_name = "first_name_example"; // string | The first name
+$last_name = "last_name_example"; // string | The last name
 $country = "country_example"; // string | 2 digit ISO country code
 $zip = "zip_example"; // string | Zip code of the address
 $street = "street_example"; // string | Street name without housenumber or any other additions.
@@ -42,8 +42,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| The API key which you got for authenticating against the API |
- **first_name** | **string**|  |
- **last_name** | **string**|  |
+ **first_name** | **string**| The first name |
+ **last_name** | **string**| The last name |
  **country** | **string**| 2 digit ISO country code |
  **zip** | **string**| Zip code of the address |
  **street** | **string**| Street name without housenumber or any other additions. |

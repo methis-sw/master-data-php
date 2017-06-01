@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**first_name** | **string** |  | 
+**first_name** | **string** | First name for the search | 
 **country_code** | **string** | 2 digit ISO country code as given in the input. Will be null if no country code is given in the input. | [optional] 
 **gender** | **string** | M for man and F for female | 
 **samples** | **int** |  | [optional] 

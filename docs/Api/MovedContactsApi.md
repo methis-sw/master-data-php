@@ -22,8 +22,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new METHIS\Api\MovedContactsApi();
 $key = "key_example"; // string | The API key which you got for authenticating against the API
-$first_name = "first_name_example"; // string | 
-$last_name = "last_name_example"; // string | 
+$first_name = "first_name_example"; // string | The first name
+$last_name = "last_name_example"; // string | The last name
 $country_old = "country_old_example"; // string | 2 digit ISO country code
 $zip_old = "zip_old_example"; // string | 
 $street_old = "street_old_example"; // string | Street name without housenumber or any other additions.
@@ -42,8 +42,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| The API key which you got for authenticating against the API |
- **first_name** | **string**|  |
- **last_name** | **string**|  |
+ **first_name** | **string**| The first name |
+ **last_name** | **string**| The last name |
  **country_old** | **string**| 2 digit ISO country code |
  **zip_old** | **string**|  |
  **street_old** | **string**| Street name without housenumber or any other additions. |

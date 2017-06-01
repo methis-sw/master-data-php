@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **street_old** | **string** | Name of the as input given street | 
 **timestamp** | **string** | Timestamp when the entry has been created | 
 **gender** | **string** | M for man and F for female | 
-**title** | **string** |  | 
-**title_of_nobility** | **string** |  | 
+**title** | **string** | Academic titles | 
+**title_of_nobility** | **string** | The title of nibility e.g. King | 
 **house_number_old** | **string** | The house number as given as input | 
 **house_number_addition_old** | **string** | The house number addition as given as input | 
 **street_addition_old** | **string** | Additions to the street name as given as input | 

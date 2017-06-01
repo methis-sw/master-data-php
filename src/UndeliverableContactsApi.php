@@ -107,8 +107,8 @@ class UndeliverableContactsApi
      * Searches for name and addresses and detects if the contact has moved or is deceased
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
-     * @param string $last_name  (required)
+     * @param string $first_name The first name (required)
+     * @param string $last_name The last name (required)
      * @param string $country_code 2 digit ISO country code (required)
      * @param string $zip Zip code of the address (required)
      * @param string $street Street name without housenumber or any other additions. (required)
@@ -127,8 +127,8 @@ class UndeliverableContactsApi
      * Searches for name and addresses and detects if the contact has moved or is deceased
      *
      * @param string $key The API key which you got for authenticating against the API (required)
-     * @param string $first_name  (required)
-     * @param string $last_name  (required)
+     * @param string $first_name The first name (required)
+     * @param string $last_name The last name (required)
      * @param string $country_code 2 digit ISO country code (required)
      * @param string $zip Zip code of the address (required)
      * @param string $street Street name without housenumber or any other additions. (required)
