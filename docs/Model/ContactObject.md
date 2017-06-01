@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **street_addition** | **string** | Additions to the street name. May be empty. | 
 **house_number** | **string** | House number of the address | 
 **house_number_addition** | **string** | Optional additions to the house number | 
+**date_of_birth** | **string** | Date of birth of the person | 
 **timestamp** | **string** | Timestamp when the entry has been created | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
