@@ -79,6 +79,7 @@ class ContactObject implements ArrayAccess
         'street_addition' => 'string',
         'house_number' => 'string',
         'house_number_addition' => 'string',
+        'date_of_birth' => 'string',
         'timestamp' => 'string'
     ];
 
@@ -104,6 +105,7 @@ class ContactObject implements ArrayAccess
         'street_addition' => 'street_addition',
         'house_number' => 'house_number',
         'house_number_addition' => 'house_number_addition',
+        'date_of_birth' => 'date_of_birth',
         'timestamp' => 'timestamp'
     ];
 
@@ -125,6 +127,7 @@ class ContactObject implements ArrayAccess
         'street_addition' => 'setStreetAddition',
         'house_number' => 'setHouseNumber',
         'house_number_addition' => 'setHouseNumberAddition',
+        'date_of_birth' => 'setDateOfBirth',
         'timestamp' => 'setTimestamp'
     ];
 
@@ -146,6 +149,7 @@ class ContactObject implements ArrayAccess
         'street_addition' => 'getStreetAddition',
         'house_number' => 'getHouseNumber',
         'house_number_addition' => 'getHouseNumberAddition',
+        'date_of_birth' => 'getDateOfBirth',
         'timestamp' => 'getTimestamp'
     ];
 
@@ -208,6 +212,7 @@ class ContactObject implements ArrayAccess
         $this->container['street_addition'] = isset($data['street_addition']) ? $data['street_addition'] : null;
         $this->container['house_number'] = isset($data['house_number']) ? $data['house_number'] : null;
         $this->container['house_number_addition'] = isset($data['house_number_addition']) ? $data['house_number_addition'] : null;
+        $this->container['date_of_birth'] = isset($data['date_of_birth']) ? $data['date_of_birth'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
     }
 
@@ -259,6 +264,9 @@ class ContactObject implements ArrayAccess
         }
         if ($this->container['house_number_addition'] === null) {
             $invalid_properties[] = "'house_number_addition' can't be null";
+        }
+        if ($this->container['date_of_birth'] === null) {
+            $invalid_properties[] = "'date_of_birth' can't be null";
         }
         if ($this->container['timestamp'] === null) {
             $invalid_properties[] = "'timestamp' can't be null";
@@ -312,6 +320,9 @@ class ContactObject implements ArrayAccess
             return false;
         }
         if ($this->container['house_number_addition'] === null) {
+            return false;
+        }
+        if ($this->container['date_of_birth'] === null) {
             return false;
         }
         if ($this->container['timestamp'] === null) {
@@ -573,6 +584,27 @@ class ContactObject implements ArrayAccess
     public function setHouseNumberAddition($house_number_addition)
     {
         $this->container['house_number_addition'] = $house_number_addition;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_of_birth
+     * @return string
+     */
+    public function getDateOfBirth()
+    {
+        return $this->container['date_of_birth'];
+    }
+
+    /**
+     * Sets date_of_birth
+     * @param string $date_of_birth Date of birth of the person
+     * @return $this
+     */
+    public function setDateOfBirth($date_of_birth)
+    {
+        $this->container['date_of_birth'] = $date_of_birth;
 
         return $this;
     }
